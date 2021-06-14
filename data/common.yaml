@@ -1,0 +1,9 @@
+---
+lookup_options:
+  "^relay::.*token":
+    convert_to: "Sensitive"
+
+relay::relay_connection_token: "%{profile::relay::connection_token}"
+relay::relay_trigger_token: "%{profile::relay::trigger_token}"
+relay::backend_options:
+  token: "%{profile::relay::access_token}"
